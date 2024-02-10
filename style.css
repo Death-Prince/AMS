@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap");
+
+:root {
+  /* font  */
+  --font-family: "Lora", serif;
+
+  /* color  */
+  --primary: #77A4AE;
+  --txtcolor:#67cee5;
+  --txtcolor2: rgb(92, 92, 92);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fd;
+  font-family: var(--font-family);
+}
+
+.container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 40px 60px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.container .grim {
+  color: rgb(92, 92, 92);
+}
+
+.container .lock {
+  color: var(--primary);
+}
+
+/* --------------------------------role------------------------------------ */
+
+.user-role {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  background-color: #ffff;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-role button {
+  color: rgb(92, 92, 92);
+  padding: 10px 15px;
+  background-color: transparent;
+  width: 140px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  font-family: var(--font-family);
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 33.33%;
+  height: 100%;
+  border-radius: 20px;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* --------------------------------input------------------------------------ */
+
+.input-group {
+  position: relative;
+}
+
+.input {
+  border: 3px solid rgba(92, 92, 92, 0.267);
+  border-radius: 10px;
+  background: none;
+  padding: 0.6rem;
+  width: 400px;
+  font-size: 1rem;
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 20px;
+}
+
+.user-label {
+  position: absolute;
+  left: 25px;
+  color: rgb(92, 92, 92);
+  pointer-events: none;
+  transform: translateY(0.6rem);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+input:valid {
+  outline: none;
+}
+
+.input:focus ~ label,
+input:valid ~ label {
+  transform: translateY(-50%) scale(0.8);
+  background-color: #f8f9fd;
+  padding: 0 0.2em;
+  left: 15px;
+}
+
+.login {
+  background-color: var(--primary);
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  padding: 0.6rem;
+  outline: none;
+  border: 3px solid var(--primary);
+  margin-bottom: 40px;
+}
