@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>AMS</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1><span class="grim">GRIM</span><span class="lock">LOCK</span></h1>
+
+        <div class="user-role" id="user-role">
+            <div id="btn" class="in"></div>
+            <button type="button" id="button1" style="color: #67cee5;" onclick="admin()">ADMIN</button>
+            <button type="button" id="button2" onclick="employee()">EMPLOYEE</button>
+            <button type="button" id="button3" onclick="student()">STUDENT</button>
+        </div>
+
+        <form action="#" id="admin">
+            <div class="input-group">
+                <input required="" type="text" name="text" autocomplete="off" class="input" />
+                <label class="user-label">Email</label>
+            </div>
+            <div class="input-group">
+                <input required="" type="password" name="text" autocomplete="off" class="input" />
+                <label class="user-label">Password</label>
+            </div>
+            <div class="input-group">
+                <button class="login">Log in</button>
+            </div>
+        </form>
+
+        <form action="#" id="employee">
+            <div class="input-group">
+                <input required="" type="text" name="text" autocomplete="off" class="input" />
+                <label class="user-label">Email</label>
+            </div>
+            <div class="input-group">
+                <input required="" type="password" name="text" autocomplete="off" class="input" />
+                <label class="user-label">Password</label>
+            </div>
+            <div class="input-group">
+                <button class="login">Log in</button>
+            </div>
+        </form>
+
+        <form action="#" id="student">
+            <div class="input-group">
+                <input required="" type="text" name="text" autocomplete="off" class="input" />
+                <label class="user-label">Email</label>
+            </div>
+            <div class="input-group">
+                <input required="" type="password" name="text" autocomplete="off" class="input" />
+                <label class="user-label">Password</label>
+            </div>
+            <div class="input-group">
+                <button class="login">Log in</button>
+            </div>
+        </form>
+
+    </div>
+    <script>
+        document.getElementById('employee').style.display = 'none';
+        document.getElementById('student').style.display = 'none';
+        document.getElementById('admin').style.display = 'none';
+
+        function admin() {
+            document.getElementById("btn").classList.remove("in");
+            document.getElementById("btn").style.left = "0%";
+            document.getElementById("button1").style.color = "#67cee5";
+            document.getElementById("button2").style.color = "#333";
+            document.getElementById("button3").style.color = "#333";
+            document.getElementById('admin').style.display = 'block';
+            document.getElementById('employee').style.display = 'none';
+            document.getElementById('student').style.display = 'none';
+        }
+
+        function employee() {
+            document.getElementById("btn").classList.add("in");
+            document.getElementById("btn").style.left = "33.33%";
+            document.getElementById("button1").style.color = "#333";
+            document.getElementById("button2").style.color = "#67cee5";
+            document.getElementById("button3").style.color = "#333";
+            document.getElementById('admin').style.display = 'none';
+            document.getElementById('employee').style.display = 'block';
+            document.getElementById('student').style.display = 'none';
+        }
+
+        function student() {
+            document.getElementById("btn").classList.add("in");
+            document.getElementById("btn").style.left = "66.66%";
+            document.getElementById("button1").style.color = "#333";
+            document.getElementById("button2").style.color = "#333";
+            document.getElementById("button3").style.color = "#67cee5";
+            document.getElementById('admin').style.display = 'none';
+            document.getElementById('employee').style.display = 'none';
+            document.getElementById('student').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
